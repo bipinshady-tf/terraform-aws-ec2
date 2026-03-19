@@ -31,3 +31,5 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
+        env:
+          TF_VAR_public_key: ${{ secrets.SSH_PUBLIC_KEY }}
